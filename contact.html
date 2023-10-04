@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <!-- ---------------- Header ---------------- -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Hotel <span>One</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <div class="custom-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <div class="navbar-nav mx-auto">
+              <a class="nav-link" href="#home">home</a>
+              <a class="nav-link" href="#about">about</a>
+              <a class="nav-link" href="facilities.html">facilities</a>
+              <a class="nav-link" href="rooms.html">rooms</a>
+              <a class="nav-link" href="#reviews">reviews</a>
+              <a class="nav-link" href="contact.html">contact</a>
+              <a
+                class="nav-link d-lg-none d-block"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+                href="#"
+              >
+                Login / Signup
+              </a>
+            </div>
+            <div class="navbar-nav d-lg-block d-none">
+              <button
+                type="button"
+                class="primary-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+              >
+                Login / Signup
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ---------------- Breadcrumb ---------------- -->
+      <section id="breadcrumb">
+        <div class="breadcrumb-nav mb-0">
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  contact
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Contact ---------------- -->
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-7">
+              <div class="section-title text-center">
+                <span>contact us</span>
+                <h2>For Any Queries & Support</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  aliquam autem ipsa suscipit a possimus eos tempora deleniti
+                  corporis dolores.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="contact-info">
+                <ul>
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                      <span>address</span>
+                      <p>
+                        <a
+                          href="https://www.google.com/maps/search/?q=Pindi+bypass+GT.+road,+gujranwala"
+                          target="_blank"
+                          >Pindi bypass GT. road, gujranwala
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                      <span>call us on</span>
+                      <p>
+                        <a href="tel:+923304623227">+92 330 4623227 </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                      <span>write us at</span>
+                      <p class="text-lowercase">
+                        <a href="mailto:hotelone@gmail.com">
+                          hotelone@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="text">
+                      <span>opening hours</span>
+                      <p>Mon - Fri: 8:00 - 19:00</p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="text">
+                      <span>customer service</span>
+                      <p>+92 330 4623227</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <form class="row contact-form g-0" action="#">
+                <div class="col-12 text-center mb-3">
+                  <h4>leave a message</h4>
+                </div>
+                <div class="col-12 mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contactName"
+                    placeholder="name"
+                  />
+                </div>
+
+                <div class="col-12 mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact_email"
+                    placeholder="email "
+                  />
+                </div>
+
+                <div class="col-12 mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact_phone"
+                    placeholder="phone "
+                  />
+                </div>
+
+                <div class="col-12 mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact_subject"
+                    placeholder="subject"
+                  />
+                </div>
+
+                <div class="col-12 mb-4">
+                  <textarea
+                    class="form-control"
+                    id="contact_message"
+                    rows="3"
+                    placeholder="message"
+                  ></textarea>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="primary-btn">
+                    send message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Modals ---------------- -->
+      <section id="modals" class="modals">
+        <!-- ---------------- Login ---------------- -->
+        <div
+          class="modal fade"
+          id="login"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <form class="p-1">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">
+                    <img src="./assets/img/icon/person-circle.svg" alt="" />
+                    user login
+                  </h5>
+                  <button
+                    type="reset"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="from-group mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      autocomplete="on"
+                    />
+                  </div>
+
+                  <div class="from-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                  <div class="forget-password mb-4">
+                    <a href="#">Forgot Password</a>
+                  </div>
+
+                  <div class="from-group col-12 d-grid">
+                    <button type="submit" class="primary-btn">Log-In</button>
+                  </div>
+
+                  <p class="footer-text">
+                    Don't have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signup"
+                      href="#"
+                      >Sign Up
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ---------------- Signup ---------------- -->
+        <div
+          class="modal fade"
+          id="signup"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  <img src="./assets/img/icon/person-lines-fill.svg" alt="" />
+                  user registration
+                </h5>
+                <button
+                  type="reset"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="row gy-3">
+                  <div class="col-md-12">
+                    <label for="fname" class="form-label">name</label>
+                    <input type="text" class="form-control" id="fname" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="email_phone" class="form-label"
+                      >e-mail or phone</label
+                    >
+                    <input type="text" class="form-control" id="email_phone" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_password" class="form-label"
+                      >password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_password"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_cpassword" class="form-label">
+                      confirm password
+                    </label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_cpassword"
+                    />
+                  </div>
+
+                  <div class="d-grid mt-4">
+                    <button type="submit" class="primary-btn">
+                      register yourself
+                    </button>
+                  </div>
+                  <p class="footer-text">
+                    Already have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login"
+                      href="#"
+                      >Log-In
+                    </a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ---------------- Footer ---------------- -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>Hotel One</h5>
+              <p class="footer-about">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col ms-lg-5 ps-lg-5">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="facilities.html">facilities</a></li>
+                <li><a href="rooms.html">rooms</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>further information</h5>
+              <ul>
+                <li><a href="#">terms & conditions</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">newsletter</a></li>
+                <li><a href="#">updates</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>follow us</h5>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.twitter.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    Twitter
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    whatsapp
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p class="footer-bottom-text">
+            &copy; 2021 All Rights Reserved By Hotel One | Designed By
+            <a href="index.html">
+              <span>Asad Mughal</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ---------------- Scroll Button ---------------- -->
+    <button class="scroll-top-btn" style="display: none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

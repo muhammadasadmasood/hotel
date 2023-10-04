@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- ---------------- Header ---------------- -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Hotel <span>One</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <div class="custom-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <div class="navbar-nav mx-auto">
+              <a class="nav-link" href="#home">home</a>
+              <a class="nav-link" href="#about">about</a>
+              <a class="nav-link" href="facilities.html">facilities</a>
+              <a class="nav-link" href="rooms.html">rooms</a>
+              <a class="nav-link" href="#reviews">reviews</a>
+              <a class="nav-link" href="contact.html">contact</a>
+              <a
+                class="nav-link d-lg-none d-block"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+                href="#"
+              >
+                Login / Signup
+              </a>
+            </div>
+            <div class="navbar-nav d-lg-block d-none">
+              <button
+                type="button"
+                class="primary-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+              >
+                Login / Signup
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ---------------- Breadcrumb ---------------- -->
+      <section id="breadcrumb">
+        <div class="breadcrumb-nav mb-0">
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  rooms
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Rooms ---------------- -->
+      <section id="rooms" class="rooms section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="section-title">
+                <span>our rooms</span>
+                <h2>A Haven of Tranquility</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                  distinctio enim iure repellendus totam dolores possimus non,
+                  quis vero
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-lg-3 col-12 mt-lg-3">
+              <!-- Filter Icon -->
+              <button
+                class="filter-icon-toggler d-lg-none d-block"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#filters"
+                aria-controls="filters"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-sliders"></i>
+              </button>
+
+              <div
+                class="offcanvas-lg offcanvas-start offcanvas-width"
+                tabindex="-1"
+                data-bs-scroll="true"
+                data-bs-backdrop="false"
+                id="filters"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-body">
+                  <div class="w-100">
+                    <li class="border mb-2">
+                      <button
+                        class="toggle-btn"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#check-availability"
+                        aria-expanded="false"
+                      >
+                        check availability
+                      </button>
+                      <div class="collapse show" id="check-availability">
+                        <ul class="toggle-bg">
+                          <li>
+                            <div class="mb-3">
+                              <label for="checkIn" class="form-label">
+                                check-in
+                              </label>
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="checkIn"
+                              />
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="checkOut" class="form-label">
+                                check-out
+                              </label>
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="checkOut"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="border mb-2">
+                      <button
+                        class="toggle-btn"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#facilities"
+                        aria-expanded="false"
+                      >
+                        facilities
+                      </button>
+                      <div class="collapse show" id="facilities">
+                        <ul class="toggle-bg">
+                          <li>
+                            <div class="form-check my-2">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="faciliteOne"
+                              />
+                              <label class="form-check-label" for="faciliteOne"
+                                >facilite One
+                              </label>
+                            </div>
+                            <div class="form-check my-2">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="faciliteTwo"
+                              />
+                              <label class="form-check-label" for="faciliteTwo"
+                                >facilite Two
+                              </label>
+                            </div>
+                            <div class="form-check my-2">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="faciliteThree"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="faciliteThree"
+                                >facilite Three
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="border mb-2">
+                      <button
+                        class="toggle-btn"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#guests"
+                        aria-expanded="false"
+                      >
+                        guests
+                      </button>
+                      <div class="collapse show" id="guests">
+                        <ul class="toggle-bg">
+                          <li>
+                            <div class="d-flex my-2">
+                              <div class="me-2">
+                                <label for="adults" class="form-label">
+                                  adults
+                                </label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  id="adults"
+                                />
+                              </div>
+                              <div>
+                                <label for="children" class="form-label">
+                                  children
+                                </label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  id="children"
+                                />
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-9" style="overflow-x: auto">
+              <div class="row gx-0 room-card">
+                <div class="col-lg-5">
+                  <div class="room-header bg-img">
+                    <img src="./assets/img/rooms/IMG_11892.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="room-box shadow-none">
+                    <div class="room-box-body">
+                      <h4>Deluxe Suite</h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Aspernatur non quasi unde dolores temporibus
+                        consequatur illum placeat odio similique aperiam quod
+                        voluptatum tenetur suscipit iure autem facere optio,
+                        nobis quam.
+                      </p>
+
+                      <div class="row mt-3">
+                        <div class="col-md-4 col-6">
+                          <div class="room-features">
+                            <h6>Features</h6>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bed"></i>
+                              <span>2 beds</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bath"></i>
+                              <span>1 bath</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-ruler-combined"></i>
+                              <span>400 sqft</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-facilities">
+                            <h6>Facilities</h6>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-wifi"></i>
+                              <span>free wifi</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-tv"></i>
+                              <span>tv</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-thermometer-half"></i>
+                              <span>air conditioner</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-ratings">
+                            <h6>rating</h6>
+                            <div class="room-rating">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-3 room-box-footer">
+                      <p><span>PKR</span>12,000<span>/ per night</span></p>
+                      <div class="row g-1 text-center">
+                        <div class="col-6 d-grid">
+                          <a href="#" class="primary-btn">book now</a>
+                        </div>
+                        <div class="col-6 d-grid">
+                          <a href="#" class="secondary-btn">more details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gx-0 room-card">
+                <div class="col-lg-5 col-12">
+                  <div class="room-header bg-img">
+                    <img src="./assets/img/rooms/IMG_39782.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="room-box shadow-none">
+                    <div class="room-box-body">
+                      <h4>Deluxe Suite</h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Aspernatur non quasi unde dolores temporibus
+                        consequatur illum placeat odio similique aperiam quod
+                        voluptatum tenetur suscipit iure autem facere optio,
+                        nobis quam.
+                      </p>
+
+                      <div class="row mt-3">
+                        <div class="col-md-4 col-6">
+                          <div class="room-features">
+                            <h6>Features</h6>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bed"></i>
+                              <span>2 beds</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bath"></i>
+                              <span>1 bath</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-ruler-combined"></i>
+                              <span>400 sqft</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-facilities">
+                            <h6>Facilities</h6>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-wifi"></i>
+                              <span>free wifi</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-tv"></i>
+                              <span>tv</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-thermometer-half"></i>
+                              <span>air conditioner</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-ratings">
+                            <h6>rating</h6>
+                            <div class="room-rating">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-3 room-box-footer">
+                      <p><span>PKR</span>12,000<span>/ per night</span></p>
+                      <div class="row g-1 text-center">
+                        <div class="col-6 d-grid">
+                          <a href="#" class="primary-btn">book now</a>
+                        </div>
+                        <div class="col-6 d-grid">
+                          <a href="#" class="secondary-btn">more details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gx-0 room-card">
+                <div class="col-lg-5 col-12">
+                  <div class="room-header bg-img">
+                    <img src="./assets/img/rooms/IMG_42663.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="room-box shadow-none">
+                    <div class="room-box-body">
+                      <h4>Deluxe Suite</h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Aspernatur non quasi unde dolores temporibus
+                        consequatur illum placeat odio similique aperiam quod
+                        voluptatum tenetur suscipit iure autem facere optio,
+                        nobis quam.
+                      </p>
+
+                      <div class="row mt-3">
+                        <div class="col-md-4 col-6">
+                          <div class="room-features">
+                            <h6>Features</h6>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bed"></i>
+                              <span>2 beds</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bath"></i>
+                              <span>1 bath</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-ruler-combined"></i>
+                              <span>400 sqft</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-facilities">
+                            <h6>Facilities</h6>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-wifi"></i>
+                              <span>free wifi</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-tv"></i>
+                              <span>tv</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-thermometer-half"></i>
+                              <span>air conditioner</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-ratings">
+                            <h6>rating</h6>
+                            <div class="room-rating">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-3 room-box-footer">
+                      <p><span>PKR</span>12,000<span>/ per night</span></p>
+                      <div class="row g-1 text-center">
+                        <div class="col-6 d-grid">
+                          <a href="#" class="primary-btn">book now</a>
+                        </div>
+                        <div class="col-6 d-grid">
+                          <a href="#" class="secondary-btn">more details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gx-0 room-card">
+                <div class="col-lg-5 col-12">
+                  <div class="room-header bg-img">
+                    <img src="./assets/img/rooms/IMG_65019.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="room-box shadow-none">
+                    <div class="room-box-body">
+                      <h4>Deluxe Suite</h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Aspernatur non quasi unde dolores temporibus
+                        consequatur illum placeat odio similique aperiam quod
+                        voluptatum tenetur suscipit iure autem facere optio,
+                        nobis quam.
+                      </p>
+
+                      <div class="row mt-3">
+                        <div class="col-md-4 col-6">
+                          <div class="room-features">
+                            <h6>Features</h6>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bed"></i>
+                              <span>2 beds</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-bath"></i>
+                              <span>1 bath</span>
+                            </div>
+                            <div class="room-feature">
+                              <i class="fa-solid fa-ruler-combined"></i>
+                              <span>400 sqft</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-facilities">
+                            <h6>Facilities</h6>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-wifi"></i>
+                              <span>free wifi</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-tv"></i>
+                              <span>tv</span>
+                            </div>
+                            <div class="room-facilitie">
+                              <i class="fa-solid fa-thermometer-half"></i>
+                              <span>air conditioner</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                          <div class="room-ratings">
+                            <h6>rating</h6>
+                            <div class="room-rating">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-3 room-box-footer">
+                      <p><span>PKR</span>12,000<span>/ per night</span></p>
+                      <div class="row g-1 text-center">
+                        <div class="col-6 d-grid">
+                          <a href="#" class="primary-btn">book now</a>
+                        </div>
+                        <div class="col-6 d-grid">
+                          <a href="#" class="secondary-btn">more details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Modals ---------------- -->
+      <section id="modals" class="modals">
+        <!-- ---------------- Login ---------------- -->
+        <div
+          class="modal fade"
+          id="login"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <form class="p-1">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">
+                    <img src="./assets/img/icon/person-circle.svg" alt="" />
+                    user login
+                  </h5>
+                  <button
+                    type="reset"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="from-group mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      autocomplete="on"
+                    />
+                  </div>
+
+                  <div class="from-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                  <div class="forget-password mb-4">
+                    <a href="#">Forgot Password</a>
+                  </div>
+
+                  <div class="from-group col-12 d-grid">
+                    <button type="submit" class="primary-btn">Log-In</button>
+                  </div>
+
+                  <p class="footer-text">
+                    Don't have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signup"
+                      href="#"
+                      >Sign Up
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ---------------- Signup ---------------- -->
+        <div
+          class="modal fade"
+          id="signup"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  <img src="./assets/img/icon/person-lines-fill.svg" alt="" />
+                  user registration
+                </h5>
+                <button
+                  type="reset"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="row gy-3">
+                  <div class="col-md-12">
+                    <label for="fname" class="form-label">name</label>
+                    <input type="text" class="form-control" id="fname" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="email_phone" class="form-label"
+                      >e-mail or phone</label
+                    >
+                    <input type="text" class="form-control" id="email_phone" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_password" class="form-label"
+                      >password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_password"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_cpassword" class="form-label">
+                      confirm password
+                    </label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_cpassword"
+                    />
+                  </div>
+
+                  <div class="d-grid mt-4">
+                    <button type="submit" class="primary-btn">
+                      register yourself
+                    </button>
+                  </div>
+                  <p class="footer-text">
+                    Already have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login"
+                      href="#"
+                      >Log-In
+                    </a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ---------------- Footer ---------------- -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>Hotel One</h5>
+              <p class="footer-about">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col ms-lg-5 ps-lg-5">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="facilities.html">facilities</a></li>
+                <li><a href="rooms.html">rooms</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>further information</h5>
+              <ul>
+                <li><a href="#">terms & conditions</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">newsletter</a></li>
+                <li><a href="#">updates</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>follow us</h5>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.twitter.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    Twitter
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    whatsapp
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p class="footer-bottom-text">
+            &copy; 2021 All Rights Reserved By Hotel One | Designed By
+            <a href="index.html">
+              <span>Asad Mughal</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ---------------- Scroll Button ---------------- -->
+    <button class="scroll-top-btn" style="display: none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+      function filterIconToggle() {
+        const filterIcon = document.querySelector(".filter-icon-toggler");
+        const offcanvas = document.querySelector(".offcanvas-lg");
+
+        filterIcon.addEventListener("click", function () {
+          offcanvas.classList.toggle("show");
+          if (offcanvas.classList.contains("show")) {
+            filterIcon.style.left = offcanvas.offsetWidth + "px";
+            filterIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          } else {
+            filterIcon.style.left = "0px";
+            filterIcon.innerHTML = '<i class="fa-solid fa-sliders"></i>';
+          }
+        });
+
+        offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+          offcanvas.classList.remove("show");
+          filterIcon.style.left = "0";
+          filterIcon.innerHTML = '<i class="fa-solid fa-sliders"></i>';
+        });
+      }
+
+      filterIconToggle();
+    </script>
+  </body>
+</html>

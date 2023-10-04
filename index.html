@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <!-- ---------------- Header ---------------- -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Hotel <span>One</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <div class="custom-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <div class="navbar-nav mx-auto">
+              <a class="nav-link" href="#home">home</a>
+              <a class="nav-link" href="#about">about</a>
+              <a class="nav-link" href="facilities.html">facilities</a>
+              <a class="nav-link" href="rooms.html">rooms</a>
+              <a class="nav-link" href="#reviews">reviews</a>
+              <a class="nav-link" href="contact.html">contact</a>
+              <a
+                class="nav-link d-lg-none d-block"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+                href="#"
+              >
+                Login / Signup
+              </a>
+            </div>
+            <div class="navbar-nav d-lg-block d-none">
+              <button
+                type="button"
+                class="primary-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+              >
+                Login / Signup
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ---------------- Home ---------------- -->
+      <section id="home" class="home">
+        <div class="swiper home-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-one"></div>
+            <div class="swiper-slide slide-two"></div>
+            <div class="swiper-slide slide-three"></div>
+            <div class="swiper-slide slide-four"></div>
+            <div class="swiper-slide slide-five"></div>
+            <div class="swiper-slide slide-six"></div>
+          </div>
+        </div>
+
+        <div class="container availability-form" id="availability-form">
+          <div class="row">
+            <div class="col-lg-12 availability">
+              <form class="row align-items-end">
+                <div class="form-group col-lg">
+                  <label for="checkin" class="form-label">check-in</label>
+                  <input type="date" class="form-control" id="checkin" />
+                </div>
+
+                <div class="form-group col-lg">
+                  <label for="checkout" class="form-label">check-out</label>
+                  <input type="date" class="form-control" id="checkout" />
+                </div>
+
+                <div class="form-group col-lg">
+                  <label for="children" class="form-label">children</label>
+                  <select class="form-select">
+                    <option selected>select children</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-lg">
+                  <label for="adults" class="form-label">adults</label>
+                  <select class="form-select">
+                    <option selected>select adults</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-lg">
+                  <button type="submit" class="primary-btn">
+                    check availability
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- About ---------------- -->
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <div class="row justify-content-between align-items-center gy-3">
+            <div class="col-lg-7">
+              <div class="content">
+                <span>about us</span>
+                <h3>Where Relaxation Meets Luxury</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officiis rerum excepturi, rem delectus molestiae quae, laborum
+                  perspiciatis quam asperiores saepe repellat voluptatem maxime
+                  fugit qui doloremque ea! Officiis, sapiente hic!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                  aut voluptatem aperiam beatae laudantium, mollitia doloribus
+                  enim nisi repellendus at blanditiis aspernatur adipisci ullam
+                  reiciendis modi perferendis error sunt nihil!
+                </p>
+                <a type="button" class="primary-btn" href="#availability-form">
+                  check availability
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 order-first order-lg-last">
+              <div class="image text-center">
+                <img
+                  src="./assets/img/about/hotel.jpg"
+                  alt="A beautiful hotel"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Milestone ---------------- -->
+      <section class="about-milestone section-padding" id="about-milestone">
+        <div class="container">
+          <div class="row text-center gy-5">
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="about-item">
+                <h1><span id="rooms-counter">0</span>+</h1>
+                <p>rooms</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="about-item">
+                <h1><span id="customers-counter">0</span>+</h1>
+                <p>customers</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="about-item">
+                <h1><span id="reviews-counter">0</span>+</h1>
+                <p>reviews</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="about-item">
+                <h1><span id="staff-counter">0</span>+</h1>
+                <p>staff members</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Facilities ---------------- -->
+      <section id="facilities" class="facilities section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="section-title">
+                <span>our facilities</span>
+                <h2>your Comfort and Enjoyment Services</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                  distinctio enim iure repellendus totam dolores possimus non,
+                  quis vero
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 justify-content-center mt-3">
+            <div class="col-lg-4 col-md-6">
+              <div class="box-item">
+                <div class="box-img">
+                  <i class="fa-solid fa-person-swimming"></i>
+                </div>
+                <div class="box-content">
+                  <h4>swimming pool</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                    distinctio enim iure repellendus totam dolores possimus non,
+                    quis vero
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="box-item">
+                <div class="box-img">
+                  <i class="fa-solid fa-spa"></i>
+                </div>
+                <div class="box-content">
+                  <h4>spa & massage</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                    distinctio enim iure repellendus totam dolores possimus non,
+                    quis vero
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="box-item">
+                <div class="box-img">
+                  <i class="fa-brands fa-confluence"></i>
+                </div>
+                <div class="box-content">
+                  <h4>conference room</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                    distinctio enim iure repellendus totam dolores possimus non,
+                    quis vero
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="more-page">
+                <a href="facilities.html" class="view-btn">
+                  know more facilities >>>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Rooms ---------------- -->
+      <section id="rooms" class="rooms section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="section-title">
+                <span>our rooms</span>
+                <h2>A Haven of Tranquility</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                  distinctio enim iure repellendus totam dolores possimus non,
+                  quis vero
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center g-4 mt-3">
+            <div class="col-lg-4 col-md-6">
+              <div class="room-header">
+                <img src="./assets/img/rooms/IMG_11892.png" />
+              </div>
+              <div class="room-box">
+                <div class="room-box-body">
+                  <h4>Deluxe Suite</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aspernatur non quasi unde dolores temporibus consequatur
+                    illum placeat odio similique aperiam quod voluptatum tenetur
+                    suscipit iure autem facere optio, nobis quam.
+                  </p>
+                </div>
+                <div class="mt-3 room-box-footer d-grid">
+                  <p><span>PKR</span>12,000<span>/ per night</span></p>
+                  <a href="#" class="primary-btn">book now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="room-header">
+                <img src="./assets/img/rooms/IMG_39782.png" />
+              </div>
+              <div class="room-box">
+                <div class="room-box-body">
+                  <h4>Deluxe Suite</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aspernatur non quasi unde dolores temporibus consequatur
+                    illum placeat odio similique aperiam quod voluptatum tenetur
+                    suscipit iure autem facere optio, nobis quam.
+                  </p>
+                </div>
+                <div class="mt-3 room-box-footer d-grid">
+                  <p><span>PKR</span>12,000<span>/ per night</span></p>
+                  <a href="#" class="primary-btn">book now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="room-header">
+                <img src="./assets/img/rooms/IMG_42663.png" />
+              </div>
+              <div class="room-box">
+                <div class="room-box-body">
+                  <h4>Deluxe Suite</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aspernatur non quasi unde dolores temporibus consequatur
+                    illum placeat odio similique aperiam quod voluptatum tenetur
+                    suscipit iure autem facere optio, nobis quam.
+                  </p>
+                </div>
+                <div class="mt-3 room-box-footer d-grid">
+                  <p><span>PKR</span>12,000<span>/ per night</span></p>
+                  <a href="#" class="primary-btn">book now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="more-page">
+                <a href="rooms.html" class="view-btn">
+                  explore more rooms >>>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Reviews ---------------- -->
+      <section id="reviews" class="reviews section-padding bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="section-title">
+                <span>testimonials</span>
+                <h2>what peoples says about us</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quasi reiciendis, nihil omnis modi atque, dolor id dolorum
+                  distinctio enim iure repellendus totam dolores possimus non,
+                  quis vero
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Swiper -->
+          <div class="swiper mySwiper pb-5 mt-5">
+            <div class="swiper-wrapper pb-1">
+              <div class="swiper-slide bg-white p-4 shadow">
+                <div class="profile d-flex align-items-center mb-3">
+                  <i class="fa-solid fa-user-circle fa-4x me-3"></i>
+                  <h5 class="mb-0">Random User</h5>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium iste ipsum doloribus commodi vel perspiciatis,
+                  quia, obcaecati voluptatum reiciendis ad magni est debitis
+                  laborum alias? Delectus modi repellat nulla quibusdam.
+                </p>
+                <div class="rating">
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                </div>
+              </div>
+
+              <div class="swiper-slide bg-white p-4 shadow">
+                <div class="profile d-flex align-items-center mb-3">
+                  <i class="fa-solid fa-user-circle fa-4x me-3"></i>
+                  <h5 class="mb-0">Random User</h5>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium iste ipsum doloribus commodi vel perspiciatis,
+                  quia, obcaecati voluptatum reiciendis ad magni est debitis
+                  laborum alias? Delectus modi repellat nulla quibusdam.
+                </p>
+                <div class="rating">
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                </div>
+              </div>
+
+              <div class="swiper-slide bg-white p-4 shadow">
+                <div class="profile d-flex align-items-center mb-3">
+                  <i class="fa-solid fa-user-circle fa-4x me-3"></i>
+                  <h5 class="mb-0">Random User</h5>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium iste ipsum doloribus commodi vel perspiciatis,
+                  quia, obcaecati voluptatum reiciendis ad magni est debitis
+                  laborum alias? Delectus modi repellat nulla quibusdam.
+                </p>
+                <div class="rating">
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                </div>
+              </div>
+
+              <div class="swiper-slide bg-white p-4 shadow">
+                <div class="profile d-flex align-items-center mb-3">
+                  <i class="fa-solid fa-user-circle fa-4x me-3"></i>
+                  <h5 class="mb-0">Random User</h5>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium iste ipsum doloribus commodi vel perspiciatis,
+                  quia, obcaecati voluptatum reiciendis ad magni est debitis
+                  laborum alias? Delectus modi repellat nulla quibusdam.
+                </p>
+                <div class="rating">
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                </div>
+              </div>
+
+              <div class="swiper-slide bg-white p-4 shadow">
+                <div class="profile d-flex align-items-center mb-3">
+                  <i class="fa-solid fa-user-circle fa-4x me-3"></i>
+                  <h5 class="mb-0">Random User</h5>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium iste ipsum doloribus commodi vel perspiciatis,
+                  quia, obcaecati voluptatum reiciendis ad magni est debitis
+                  laborum alias? Delectus modi repellat nulla quibusdam.
+                </p>
+                <div class="rating">
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                  <div class="fa-solid fa-star"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Contact ---------------- -->
+      <section id="contact" class="contact section-padding bg-white">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-7">
+              <div class="section-title text-center">
+                <span>contact us</span>
+                <h2>For Any Queries & Support</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  aliquam autem ipsa suscipit a possimus eos tempora deleniti
+                  corporis dolores.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="contact-info">
+                <ul>
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                      <span>address</span>
+                      <p>
+                        <a
+                          href="https://www.google.com/maps/search/?q=Pindi+bypass+GT.+road,+gujranwala"
+                          target="_blank"
+                          >Pindi bypass GT. road, gujranwala
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                      <span>call us on</span>
+                      <p>
+                        <a href="tel:+923304623227" class="text-secondary">
+                          +92 330 4623227
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                      <span>write us at</span>
+                      <p class="text-lowercase">
+                        <a
+                          href="mailto:hotelone@gmail.com"
+                          class="text-secondary"
+                          >hotelone@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="contact-item">
+                    <div class="icon">
+                      <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="text">
+                      <span>opening hours</span>
+                      <p>Mon - Fri: 8:00 - 19:00</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-6">
+              <iframe
+                height="384px"
+                class="w-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108086.67995139003!2d74.0822120081889!3d32.158157531906014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f2983d520eb29%3A0x6fb33af85e7a368!2sGujranwala%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1695324198110!5m2!1sen!2s"
+                loading="lazy"
+                allowfullscreen=""
+                referrerpolicy="no-referrer"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- Modals ---------------- -->
+      <section id="modals" class="modals">
+        <!-- ---------------- Login ---------------- -->
+        <div
+          class="modal fade"
+          id="login"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <form class="p-1">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">
+                    <img src="./assets/img/icon/person-circle.svg" alt="" />
+                    user login
+                  </h5>
+                  <button
+                    type="reset"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="from-group mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      autocomplete="on"
+                    />
+                  </div>
+
+                  <div class="from-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                  <div class="forget-password mb-4">
+                    <a href="#">Forgot Password</a>
+                  </div>
+
+                  <div class="from-group col-12 d-grid">
+                    <button type="submit" class="primary-btn">Log-In</button>
+                  </div>
+
+                  <p class="footer-text">
+                    Don't have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signup"
+                      href="#"
+                      >Sign Up
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ---------------- Signup ---------------- -->
+        <div
+          class="modal fade"
+          id="signup"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  <img src="./assets/img/icon/person-lines-fill.svg" alt="" />
+                  user registration
+                </h5>
+                <button
+                  type="reset"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="row gy-3">
+                  <div class="col-md-12">
+                    <label for="fname" class="form-label">name</label>
+                    <input type="text" class="form-control" id="fname" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="email_phone" class="form-label"
+                      >e-mail or phone</label
+                    >
+                    <input type="text" class="form-control" id="email_phone" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_password" class="form-label"
+                      >password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_password"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="singup_cpassword" class="form-label">
+                      confirm password
+                    </label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="singup_cpassword"
+                    />
+                  </div>
+
+                  <div class="d-grid mt-4">
+                    <button type="submit" class="primary-btn">
+                      register yourself
+                    </button>
+                  </div>
+                  <p class="footer-text">
+                    Already have an account ?
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login"
+                      href="#"
+                      >Log-In
+                    </a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ---------------- Footer ---------------- -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>Hotel One</h5>
+              <p class="footer-about">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col ms-lg-5 ps-lg-5">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="facilities.html">facilities</a></li>
+                <li><a href="rooms.html">rooms</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>further information</h5>
+              <ul>
+                <li><a href="#">terms & conditions</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">newsletter</a></li>
+                <li><a href="#">updates</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h5>follow us</h5>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.twitter.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    Twitter
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/">
+                    <div class="icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    whatsapp
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p class="footer-bottom-text">
+            &copy; 2021 All Rights Reserved By Hotel One | Designed By
+            <a
+              href="https://www.facebook.com/Muhammedasadmasood/"
+              target="_blank"
+              ><span>Asad Mughal</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ---------------- Scroll Button ---------------- -->
+    <button class="scroll-top-btn" style="display: none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const roomsCounter = document.getElementById("rooms-counter");
+        const customersCounter = document.getElementById("customers-counter");
+        const reviewsCounter = document.getElementById("reviews-counter");
+        const staffCounter = document.getElementById("staff-counter");
+
+        const roomsTarget = 50;
+        const customersTarget = 500;
+        const reviewsTarget = 250;
+        const staffTarget = 100;
+
+        let roomsCount = 0;
+        let customersCount = 0;
+        let reviewsCount = 0;
+        let staffCount = 0;
+
+        function updateCounters() {
+          if (roomsCount < roomsTarget) {
+            roomsCount++;
+            roomsCounter.innerText = roomsCount;
+          }
+          if (customersCount < customersTarget) {
+            customersCount++;
+            customersCounter.innerText = customersCount;
+          }
+          if (reviewsCount < reviewsTarget) {
+            reviewsCount++;
+            reviewsCounter.innerText = reviewsCount;
+          }
+          if (staffCount < staffTarget) {
+            staffCount++;
+            staffCounter.innerText = staffCount;
+          }
+        }
+
+        const milestoneSection = document.getElementById("about-milestone");
+
+        if (milestoneSection) {
+          const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+              setInterval(updateCounters, 100);
+              observer.disconnect();
+            }
+          });
+          observer.observe(milestoneSection);
+        } else {
+          console.error("Element with ID 'milestone-section' not found.");
+        }
+      });
+    </script>
+  </body>
+</html>

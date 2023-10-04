@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <!-- ---------------- Admin Dashboard ---------------- -->
+    <header id="admin-panel" class="admin-panel">
+      <button
+        class="primary-btn d-lg-none d-block"
+        style="margin-left: 250px !important"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div
+        class="offcanvas offcanvas-start side-bar"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">
+            <i class="fa-solid fa-crown me-2"></i><span>Admin</span>
+          </h5>
+        </div>
+
+        <div class="offcanvas-body p-0 m-0">
+          <ul class="navbar-nav admin-navbar">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-house me-2"></i>
+              <span>dashboard</span>
+            </a>
+            <div>
+              <a
+                class="nav-link nav-link-toggler"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#booking"
+                >booking
+              </a>
+              <div class="collapse" id="booking">
+                <a href="#" class="nav-link toggle-items">new booking</a>
+                <a href="#" class="nav-link toggle-items">refund booking</a>
+                <a href="#" class="nav-link toggle-items">booking records</a>
+              </div>
+            </div>
+            <a class="nav-link" href="#">users</a>
+            <a class="nav-link" href="#">user queries</a>
+            <a class="nav-link" href="#">rating & reviews</a>
+            <a class="nav-link" href="#">rooms</a>
+            <a class="nav-link" href="#">features & facilities</a>
+            <a class="nav-link" href="#">slider</a>
+            <a class="nav-link" href="#">site setting</a>
+          </ul>
+        </div>
+        <div class="logout-panel">
+          <div class="user-info">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <span>asad mughal</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-5 pt-5 admin-main">
+      <div class="container-fluid"></div>
+    </main>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
